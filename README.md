@@ -7,8 +7,8 @@
 
 ## Data Cleaning with SQL
 
-select *
-from PortfolioProject.dbo.NashvilHousing
+'''select *
+from PortfolioProject.dbo.NashvilHousing'''
 
 
 ### Data Format Standardization
