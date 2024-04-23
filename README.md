@@ -14,6 +14,12 @@ from PortfolioProject.dbo.NashvilHousing
 
 
 ### Data Format Standardization
-	--Convert SaleDate into Date format
+Convert SaleDate into Date format
 
+```
+ALTER TABLE [dbo].[NashvilHousing]
+add SaleDateConverted Date;
 
+update [dbo].[NashvilHousing]
+set SaleDateConverted = CONVERT(date,SaleDate)
+```
