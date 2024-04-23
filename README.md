@@ -2,6 +2,11 @@
 ## Table of Contents
 
 - [Data Cleaning with SQL](#Data_Cleaning_with_SQL)
+  
+  - Data Format Standardization
+  
+  - [Populate Property Address Data](#Populate_Property)       
+  
 - [SQL Data Exploration]
 
 
