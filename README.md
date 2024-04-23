@@ -134,3 +134,46 @@ set SoldAsVacant = CASE when SoldAsVacant = 'Y' then 'Yes'
 	  Else SoldAsVacant
 	  End
 ```
+
+## Remove Duplicates
+It is not recommended to delete data from the data set, instead we could use temp table.
+
+We can do this in many different ways(RANK,ORDER RANK,ROW_NUMBER).
+
+```
+with RowNumCTE as(
+select *,
+	ROW_NUMBER() over(
+	partition by ParcelID,
+	PropertyAddress,
+	SaleDate,
+	SalePrice,
+	LegalReference
+	order by 
+		UniqueID
+		) row_num
+from PortfolioProject.dbo.NashvilHousing
+)
+select *
+from RowNumCTE
+where row_num>1
+order by ParcelID
+```
+```
+with RowNumCTE as(
+select *,
+	ROW_NUMBER() over(
+	partition by ParcelID,
+	PropertyAddress,
+	SaleDate,
+	SalePrice,
+	LegalReference
+	order by 
+		UniqueID
+		) row_num
+from PortfolioProject.dbo.NashvilHousing
+)
+delete
+from RowNumCTE
+where row_num>1
+```
