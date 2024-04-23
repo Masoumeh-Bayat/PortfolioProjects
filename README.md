@@ -84,7 +84,7 @@ update NashvilHousing
 set PropertySplitCity = SUBSTRING(PropertyAddress,CHARINDEX(',' ,PropertyAddress)+1,LEN(PropertyAddress))
 ```
 
-### Make 3 columns out of OwnerAddress(OwnerSplitAddress,OwnerSplitCity,OwnerSplitState)
+#### Make 3 columns out of OwnerAddress(OwnerSplitAddress,OwnerSplitCity,OwnerSplitState)
 ```
 select PARSENAME(REPLACE(OwnerAddress,',','.'),3) OwnerSplitAddress,
 PARSENAME(REPLACE(OwnerAddress,',','.'),2) OwnerSplitCity,
@@ -109,4 +109,28 @@ set OwnerSplitCity = PARSENAME(REPLACE(OwnerAddress,',','.'),2)
 
 update NashvilHousing
 set OwnerSplitState= PARSENAME(REPLACE(OwnerAddress,',','.'),1)
+```
+
+## Change Y and N to Yes and No in "Sold as Vacant" field
+```
+select distinct(SoldAsVacant) , count(SoldAsVacant) repetition
+from NashvilHousing
+group by SoldAsVacant
+order by repetition
+```
+```
+select SoldAsVacant
+,CASE when SoldAsVacant = 'Y' then 'Yes'
+	  when SoldAsVacant = 'N' then 'No'
+	  Else SoldAsVacant
+	  End
+from NashvilHousing
+```
+
+```
+update NashvilHousing
+set SoldAsVacant = CASE when SoldAsVacant = 'Y' then 'Yes'
+	  when SoldAsVacant = 'N' then 'No'
+	  Else SoldAsVacant
+	  End
 ```
