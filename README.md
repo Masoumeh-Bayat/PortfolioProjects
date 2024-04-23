@@ -10,7 +10,8 @@
 select *
 from PortfolioProject.dbo.NashvilHousing
 
---Data Format Standardization
+
+### Data Format Standardization
 	--Convert SaleDate into Date format
 
 
