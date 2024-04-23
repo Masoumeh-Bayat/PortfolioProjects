@@ -1,7 +1,7 @@
 # PortfolioProjects
 ## Table of Contents
 
-- [Data Cleaning with SQL]
+- [Data Cleaning with SQL](#Data_Cleaning_with_SQL)
 - [SQL Data Exploration]
 
 
