@@ -5,7 +5,7 @@
   
   - Data Format Standardization
   
-  - [Populate Property Address Data](#Populate_Property_Address_Data)       
+  - [Populate Property Address Data](#Populate_Property)       
   
 - [SQL Data Exploration]
 
@@ -29,7 +29,7 @@ update [dbo].[NashvilHousing]
 set SaleDateConverted = CONVERT(date,SaleDate)
 ```
 
-### Populate Property Address Data
+### Populate Property
 There are some fileds with null for property!
 
 The table has some fileds with same parcel id, but one has property address and the other do not. So, we should populate these two.
