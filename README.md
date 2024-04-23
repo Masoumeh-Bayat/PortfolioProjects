@@ -177,3 +177,12 @@ delete
 from RowNumCTE
 where row_num>1
 ```
+
+## Delete Unused Columns
+Do not do it on row data, Just do for views
+
+As we splited address to be more useful, so we delete the originals
+```
+Alter table PortfolioProject.dbo.NashvilHousing
+drop column OwnerAddress, TaxDistrict, PropertyAddress
+```
