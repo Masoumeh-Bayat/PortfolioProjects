@@ -111,7 +111,7 @@ update NashvilHousing
 set OwnerSplitState= PARSENAME(REPLACE(OwnerAddress,',','.'),1)
 ```
 
-## Change Y and N to Yes and No in "Sold as Vacant" field
+### Change Y and N to Yes and No in "Sold as Vacant" field
 ```
 select distinct(SoldAsVacant) , count(SoldAsVacant) repetition
 from NashvilHousing
@@ -135,7 +135,7 @@ set SoldAsVacant = CASE when SoldAsVacant = 'Y' then 'Yes'
 	  End
 ```
 
-## Remove Duplicates
+### Remove Duplicates
 It is not recommended to delete data from the data set, instead we could use temp table.
 
 We can do this in many different ways(RANK,ORDER RANK,ROW_NUMBER).
@@ -178,7 +178,7 @@ from RowNumCTE
 where row_num>1
 ```
 
-## Delete Unused Columns
+### Delete Unused Columns
 Do not do it on row data, Just do for views
 
 As we splited address to be more useful, so we delete the originals
