@@ -2,7 +2,7 @@
 ##Data_Cleaning_with_SQL
 ### Table of Contents
 
-- [Data Cleaning with SQL](#Data_Cleaning_with_SQL
+- [Data Cleaning with SQL]
   
   - Data Format Standardization
   
