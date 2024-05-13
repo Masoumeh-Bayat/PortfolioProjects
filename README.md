@@ -1,5 +1,6 @@
 # PortfolioProjects
-## Table of Contents
+##Data_Cleaning_with_SQL
+### Table of Contents
 
 - [Data Cleaning with SQL](#Data_Cleaning_with_SQL
   
@@ -7,8 +8,6 @@
   
   - [Populate Property Address Data]      
   
-- [SQL Data Exploration]
-
 
 ## Data Cleaning with SQL
 
