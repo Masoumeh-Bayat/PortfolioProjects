@@ -3,10 +3,13 @@
 ### Table of Contents
 
 - [Data Cleaning with SQL]
-  
   - Data Format Standardization
-  
-  - [Populate Property Address Data]      
+  - [Populate Property Address Data]
+  - [Breaking out Property Address into Individual Column]
+  - [ Make 3 columns out of OwnerAddress]
+  - [Change Y and N to Yes and No in "Sold as Vacant" field]
+  - [Remove Duplicates]
+  - [Delete Unused Columns]
   
 
 ## Data Cleaning with SQL
